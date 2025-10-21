@@ -4,7 +4,7 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		kf_ver		6.5.0
 %define		kp_ver		6.3.2
 %define		qt_ver		6.7.0
@@ -13,12 +13,12 @@
 Summary:	KDE Window manager
 Summary(pl.UTF-8):	Zarządca okien KDE
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	7cfec851c609cd28b449cc323afe9ceb
+# Source0-md5:	ebca97b004c8eb340b8b6df687a060ca
 URL:		https://kde.org/
 BuildRequires:	EGL-devel
 BuildRequires:	Mesa-libgbm-devel >= 21.3
@@ -242,49 +242,45 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kconf_update_bin/kwin-6.1-remove-gridview-expose-shortcuts-x11
 %attr(755,root,root) %{_libdir}/kconf_update_bin/kwin5_update_default_rules_x11
 %ghost %{_libdir}/libkcmkwincommon-x11.so.6
-%attr(755,root,root) %{_libdir}/libkcmkwincommon-x11.so.*.*
+%{_libdir}/libkcmkwincommon-x11.so.*.*
 %ghost %{_libdir}/libkwin-x11.so.6
-%attr(755,root,root) %{_libdir}/libkwin-x11.so.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/packagestructure/kwin_aurorae_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/packagestructure/kwin_decoration_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/packagestructure/kwin_effect_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/packagestructure/kwin_scripts_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/packagestructure/kwin_windowswitcher_x11.so
+%{_libdir}/libkwin-x11.so.*.*
+%{_libdir}/qt6/plugins/kf6/packagestructure/kwin_aurorae_x11.so
+%{_libdir}/qt6/plugins/kf6/packagestructure/kwin_decoration_x11.so
+%{_libdir}/qt6/plugins/kf6/packagestructure/kwin_effect_x11.so
+%{_libdir}/qt6/plugins/kf6/packagestructure/kwin_scripts_x11.so
+%{_libdir}/qt6/plugins/kf6/packagestructure/kwin_windowswitcher_x11.so
 %dir %{_libdir}/qt6/plugins/kwin-x11
 %dir %{_libdir}/qt6/plugins/kwin-x11/effects
 %dir %{_libdir}/qt6/plugins/kwin-x11/effects/configs
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kcm_kwin4_genericscripted.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_blur_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_diminactive_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_glide_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_invert_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_magiclamp_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_magnifier_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_mouseclick_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_mousemark_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_overview_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_showpaint_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_slide_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_thumbnailaside_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_tileseditor_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_trackmouse_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_windowview_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_wobblywindows_config.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_zoom_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kcm_kwin4_genericscripted.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_blur_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_diminactive_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_glide_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_magiclamp_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_mouseclick_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_mousemark_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_overview_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_slide_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_thumbnailaside_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_tileseditor_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_trackmouse_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_windowview_config.so
+%{_libdir}/qt6/plugins/kwin-x11/effects/configs/kwin_wobblywindows_config.so
 %dir %{_libdir}/qt6/plugins/kwin-x11/plugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/plugins/krunnerintegration.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwin-x11/plugins/nightlight.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_animations_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_effects_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_scripts_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_virtualdesktops_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwindecoration_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwinrules_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwinoptions_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwinscreenedges_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwintabbox_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwintouchscreen_x11.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kwincompositing.so
+%{_libdir}/qt6/plugins/kwin-x11/plugins/krunnerintegration.so
+%{_libdir}/qt6/plugins/kwin-x11/plugins/nightlight.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_animations_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_effects_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_scripts_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwin_virtualdesktops_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwindecoration_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_kwinrules_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwinoptions_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwinscreenedges_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwintabbox_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwintouchscreen_x11.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kwincompositing.so
 %dir %{_libdir}/qt6/qml/org/kde/kwin_x11
 %dir %{_libdir}/qt6/qml/org/kde/kwin_x11/private
 %dir %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects
@@ -292,15 +288,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/WindowHeapDelegate.qml
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/effectsplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/libeffectsplugin.so
+%{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/libeffectsplugin.so
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/effects/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration/kdecorationprivatedeclarative.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration/libkdecorationprivatedeclarative.so
+%{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration/libkdecorationprivatedeclarative.so
 %{_libdir}/qt6/qml/org/kde/kwin_x11/private/kdecoration/qmldir
 %attr(755,root,root) %{_prefix}/libexec/kwin-applywindowdecoration-x11
 %attr(755,root,root) %{_prefix}/libexec/kwin_killer_helper_x11
+%attr(755,root,root) %{_libdir}/kconf_update_bin/kwin-6.5-showpaint-changes-x11
 
 %files data -f %{kpname}.lang
 %defattr(644,root,root,755)
