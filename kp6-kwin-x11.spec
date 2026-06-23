@@ -4,7 +4,7 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeplasmaver	6.7.0
+%define		kdeplasmaver	6.7.1
 %define		kf_ver		6.5.0
 %define		kp_ver		6.3.2
 %define		qt_ver		6.7.0
@@ -13,12 +13,12 @@
 Summary:	KDE Window manager
 Summary(pl.UTF-8):	Zarządca okien KDE
 Name:		kp6-%{kpname}
-Version:	6.7.0
+Version:	6.7.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	e24b32a4ed55a578acc62272e96c9f52
+# Source0-md5:	baca37bd7f2d303207fa612ca926df46
 URL:		https://kde.org/
 BuildRequires:	EGL-devel
 BuildRequires:	Mesa-libgbm-devel >= 21.3
